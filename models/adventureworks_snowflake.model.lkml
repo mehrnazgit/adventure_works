@@ -1,5 +1,6 @@
 connection: "adventureworks_snowflake"
 
+
 # include all the views
 include: "/views/**/*.view"
 
