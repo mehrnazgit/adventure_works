@@ -10,7 +10,9 @@ view: employeebirthday {
       column: birthdate_date {}
     }
   }
-  dimension: gender {}
+  dimension: gender {
+    type: string
+  }
   dimension: employeeid {
     type: number
   }
