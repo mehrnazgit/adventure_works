@@ -21,6 +21,10 @@ explore: salesperson {
 }
 
 explore: employee {
+  join: employeedepartmenthistory {
+    relationship: one_to_one
+    sql_on: ${employee.employeeid}=${employeedepartmenthistory.employeeid} ;;
+  }
   label: "Employee"
   view_name:  employee
 }
