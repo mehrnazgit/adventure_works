@@ -77,3 +77,32 @@ explore: productlistpricehistory {
   label: "ProductListPrice"
   view_name: productlistpricehistory
 }
+
+explore: employee1 {
+  from: employee
+  join: employeebirthday {
+    type: left_outer
+    relationship: one_to_one
+    sql_on: ${employeebirthday.employeeid}=${employee1.employeeid} ;;
+  }
+  join: employeedepartmenthistory {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${employee1.employeeid}=${employeedepartmenthistory.employeeid} ;;
+  }
+  join: employeepayhistory {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${employee1.employeeid}=${employeepayhistory.employeeid} ;;
+  }
+  join: department {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${department.departmentid}=${employeedepartmenthistory.departmentid} ;;
+  }
+  join: shift {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${employeedepartmenthistory.shiftid}=${shift.shiftid} ;;
+  }
+}
