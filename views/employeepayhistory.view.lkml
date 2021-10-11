@@ -52,4 +52,8 @@ view: employeepayhistory {
     type: count
     drill_fields: []
   }
+  measure: average_payfrequency {
+    type: average
+    sql: ${payfrequency} ;;
+  }
 }

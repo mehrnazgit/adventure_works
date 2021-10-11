@@ -120,4 +120,8 @@ view: employee {
     type: count
     drill_fields: [employeeid, employeedepartmenthistory.count, purchaseorderheader.count]
   }
+  measure: sum_vacationhours {
+    type: sum
+    sql: ${vacationhours} ;;
+  }
 }

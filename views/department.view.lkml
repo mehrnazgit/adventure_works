@@ -34,6 +34,11 @@ view: department {
     sql: ${TABLE}."NAME" ;;
   }
 
+  dimension: name_adjusted {
+    type: string
+    sql: CASE WHEN ${name}= 'Engineering' THEN 'wim_mehrnaz' ELSE ${name} END;;
+  }
+
   measure: count {
     type: count
     drill_fields: [departmentid, groupname, name, employeedepartmenthistory.count]

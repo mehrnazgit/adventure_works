@@ -63,4 +63,10 @@ view: shift {
     type: count
     drill_fields: [shiftid, name]
   }
+  dimension_group: shift_duration {
+    type: duration
+    sql_start: ${starttime_date};;
+    sql_end: ${endtime_date};;
+    intervals: [hour]
+  }
 }
