@@ -8,6 +8,7 @@ view: myderivedtable {
       column: sum_vacationhours {}
       column: count {}
       column: departmentid { field: department.departmentid }
+      column: name { field: department.name }
       filters: {
         field: employee1.gender
         value: "M"
@@ -22,6 +23,10 @@ view: myderivedtable {
   }
   dimension: departmentid {
     type: number
+  }
+  dimension: name {
+    type: string
+    label: "department name"
   }
   measure: employeesvacationhours {
     type: number
