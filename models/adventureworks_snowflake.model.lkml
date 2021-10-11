@@ -107,5 +107,5 @@ explore: employee1 {
   }
 }
 explore: myderivedtable {
-  label: "male_employees"
+  label: "Male Employees"
 }
