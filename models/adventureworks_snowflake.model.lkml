@@ -106,3 +106,6 @@ explore: employee1 {
     sql_on: ${employeedepartmenthistory.shiftid}=${shift.shiftid} ;;
   }
 }
+explore: myderivedtable {
+  label: "male_employees"
+}
