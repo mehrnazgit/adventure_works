@@ -5,7 +5,7 @@ connection: "adventureworks_snowflake"
 include: "/views/**/*.view"
 
 datagroup: adventureworks_snowflake_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  #sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
 
@@ -60,6 +60,16 @@ explore: employee_department {
     relationship: many_to_one
     sql_on: ${employeedepartmenthistory.shiftid} = ${shift.shiftid} ;;
   }
+  # aggregate_table: rollup__count__departmentid__sum_vacationhours {
+  #   query: {
+  #     dimensions: [count, sum_vacationhours]
+  #     measures: [employee.sum_vacationhours]
+  #   }
+
+  #   materialization: {
+  #     datagroup_trigger: adventureworks_snowflake_default_datagroup
+  #   }
+  # }
   label: "Employee Department Info"
   view_name: employee
 }
