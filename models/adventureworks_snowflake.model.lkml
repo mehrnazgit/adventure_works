@@ -75,6 +75,10 @@ explore: employee_department {
 }
 
 explore: salesorderheader {
+  access_filter: {
+    field: salesterritory.group
+    user_attribute: region_attribute
+  }
   join: salesterritory {
     relationship: many_to_one
     sql_on:  ${salesorderheader.territoryid} = ${salesterritory.territoryid} ;;
