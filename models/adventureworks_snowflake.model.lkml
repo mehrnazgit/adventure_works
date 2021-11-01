@@ -81,10 +81,7 @@ explore: salesorderheader {
   }
   label: "Sales"
   view_name:salesorderheader
-  access_filter: {
-    field: salesterritory.group
-    user_attribute: region_attribute
-  }
+
 }
 
 explore: productlistpricehistory {
