@@ -15,6 +15,9 @@ view: salesterritory {
   dimension: countryregioncode {
     type: string
     sql: ${TABLE}."COUNTRYREGIONCODE" ;;
+    html: {% if value == 'US' %}
+    <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" height=20 width=20>{{rendered_value}}</p>
+    {% endif %};;
   }
 
   dimension: group {
