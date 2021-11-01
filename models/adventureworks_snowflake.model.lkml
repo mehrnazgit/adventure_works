@@ -82,7 +82,7 @@ explore: salesorderheader {
   label: "Sales"
   view_name:salesorderheader
   access_filter: {
-    field: salesterritory.countryregioncode
+    field: salesterritory.group
     user_attribute: region_attribute
   }
 }
