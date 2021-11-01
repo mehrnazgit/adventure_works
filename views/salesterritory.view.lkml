@@ -15,18 +15,19 @@ view: salesterritory {
   dimension: countryregioncode {
     type: string
     sql: ${TABLE}."COUNTRYREGIONCODE" ;;
-    html: {% if value == 'US' %}
-      <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" height=20 width=20>{{rendered_value}}</p>
-    {% elsif value=='GB' %}
-      <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height=20 width=20>{{rendered_value}}</p>
-    {% elsif value=='CA' %}
-      <p><img src="https://www.alaskapublic.org/wp-content/uploads/2020/03/ca-flag.jpg" height=20 width=20>{{rendered_value}}</p>
-    {% elsif value=='FR' %}
-      <p><img src="https://en.wikipedia.org/wiki/Flag_of_France#/media/File:Flag_of_France.svg" height=20 width=20>{{rendered_value}}</p>
-    {% elsif value=='DE' %}
-      <p><img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" height=20 width=20>{{rendered_value}}</p>
-    {% elsif value=='AU' %}
-      <p><img src="https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg" height=20 width=20>{{rendered_value}}</p>
+    html:
+    {% if value == 'FR' %}
+      <img src="https://cdn.pixabay.com/photo/2012/04/11/15/19/france-28463_960_720.png" height=20 width=30 /> {{rendered_value}}
+    {% elsif value == "GB" %}
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height=20 width=30 /> {{rendered_value}}
+    {% elsif value == "CA" %}
+      <img src="https://www.alaskapublic.org/wp-content/uploads/2020/03/ca-flag.jpg" height=20 width=30 /> {{rendered_value}}
+    {% elsif value == "US" %}
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" height=20 width=30 /> {{rendered_value}}
+    {% elsif value == "DE" %}
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" height=20 width=30 /> {{rendered_value}}
+    {% elsif value == "AU" %}
+    <p><img src="https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg" height=20 width=30 /> {{rendered_value}}
     {% endif %};;
   }
 
