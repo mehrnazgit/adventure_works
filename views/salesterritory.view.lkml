@@ -16,7 +16,17 @@ view: salesterritory {
     type: string
     sql: ${TABLE}."COUNTRYREGIONCODE" ;;
     html: {% if value == 'US' %}
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" height=20 width=20>{{rendered_value}}</p>
+      <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" height=20 width=20>{{rendered_value}}</p>
+    {% elsif value=='GB' %}
+      <p><img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Flag_of_the_United_Kingdom.svg" height=20 width=20>{{rendered_value}}</p>
+    {% elsif value=='CA' %}
+      <p><img src="https://www.alaskapublic.org/wp-content/uploads/2020/03/ca-flag.jpg" height=20 width=20>{{rendered_value}}</p>
+    {% elsif value=='FR' %}
+      <p><img src="https://en.wikipedia.org/wiki/Flag_of_France#/media/File:Flag_of_France.svg" height=20 width=20>{{rendered_value}}</p>
+    {% elsif value=='DE' %}
+      <p><img src="https://upload.wikimedia.org/wikipedia/en/b/ba/Flag_of_Germany.svg" height=20 width=20>{{rendered_value}}</p>
+    {% elsif value=='AU' %}
+      <p><img src="https://cdn.britannica.com/78/6078-004-77AF7322/Flag-Australia.jpg" height=20 width=20>{{rendered_value}}</p>
     {% endif %};;
   }
 
