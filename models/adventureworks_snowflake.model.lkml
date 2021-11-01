@@ -18,10 +18,6 @@ explore: salesperson {
   }
   label: "Sales Person"
   view_name:  salesperson
-  access_filter: {
-    field: salesterritory.group
-    user_attribute: region_attribute
-  }
 }
 
 explore: employee {
