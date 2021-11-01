@@ -74,6 +74,8 @@ explore: employee_department {
   view_name: employee
 }
 
+#access filter added
+
 explore: salesorderheader {
   access_filter: {
     field: salesterritory.group
