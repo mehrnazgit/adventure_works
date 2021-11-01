@@ -81,6 +81,10 @@ explore: salesorderheader {
   }
   label: "Sales"
   view_name:salesorderheader
+  access_filter: {
+    field: salesterritory.countryregioncode
+    user_attribute: region_attribute
+  }
 }
 
 explore: productlistpricehistory {
@@ -118,4 +122,11 @@ explore: employee1 {
 }
 explore: myderivedtable {
   label: "Male Employees"
+}
+explore: mytest {
+  join: employee {
+    type: left_outer
+    relationship: one_to_one
+    sql_on:  ;;
+  }
 }

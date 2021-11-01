@@ -7,6 +7,7 @@ view: employee {
     primary_key: yes
     type: number
     sql: ${TABLE}."EMPLOYEEID" ;;
+    group_label: "emp"
   }
 
   dimension_group: birthdate {
@@ -22,6 +23,7 @@ view: employee {
     convert_tz: no
     datatype: date
     sql: ${TABLE}."BIRTHDATE" ;;
+    group_label: "emp"
   }
 
   dimension: contactid {
